@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+</head>
+<body>
+
+<div>
+     <img src="{{ url_for('static', filename='logo.png') }}" alt="logo" class="logo">
+    
+     <a href="about.html"><button style="float: right; height: 35px;width: 180px; ">About</button></a>
+     </div>
+     <div class="main">
+     <div class="sub-main">
+       <div>
+         <div class="imgs">
+           <div class="container-image">
+             <img src="{{ url_for('static', filename='a.png') }}" alt="profile" class="profile"/>
+
+           </div>
+         </div>
+         <div>
+           <h1>Login</h1>
+           <div>
+            <form method="POST" action="{{ url_for('Login') }}">
+             <img src="{{ url_for('static', filename='email.jpg') }}" alt="email" class="email"/>
+             <input type="text" placeholder="UserName" class="name" name="UserName" id="UserName" required/>
+           </div>
+           <div class="second-input">
+             <img src="{{ url_for('static', filename='pass.png') }}" alt="pass" class="email"/>
+             <input type="password" placeholder="Password" class="pass" name="password" id="password"required/>
+           </div>
+          <div class="login-button">
+          <a ><button type="submit">Login</button></a>
+          </div>
+        </form>
+            <p class="link">
+              <a style="color: black;" >Don't have an account?</a><a href="signup.html">Sign Up</a>
+            </p>
+           
+ 
+         </div>
+       </div>
+       
+
+     </div>
+    </div>
+    </div>
+</body>
+</html>

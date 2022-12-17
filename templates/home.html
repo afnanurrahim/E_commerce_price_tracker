@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home</title>
+  <link rel="icon" href="{{ url_for('static', filename='a.png') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+  <script src="ip.js"></script>
+  
+</head>
+<body>
+
+<div>
+  <div class="l1">
+     <img src="{{ url_for('static', filename='logo.png') }}" alt="logo" class="logo"> 
+  
+     <!-- <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="about.html">About</a>
+  <a href="home.html">Home</a>
+  <a href="graph.html">Graphs</a>
+  
+</div> -->
+<div id="menu" align="right" >
+<!-- Use any element to open the sidenav -->
+<!-- <span onclick="openNav()" ><p id="a1">MENU</p></span> -->
+<form class="color-box" method="POST" action="{{ url_for('productList') }}">
+<button style="height: 35px;width: 180px; ">Product List</button>
+</form>
+</div>
+</div>
+
+<div id="main">
+
+</div>
+    <div class="main">
+     <div class="sub-main">
+       <div>         
+         <div>
+           <h1>Add Product To Track</h1>
+           <img src="{{ url_for('static', filename='cart.png') }}" class="cart">
+           <div>
+             <h3 >Product URL</h3>
+             <form method="POST" action="{{ url_for('addProduct') }}">
+             <img src="{{ url_for('static', filename='url.png') }}" alt="url1" class="url1"/>
+
+             <input type="text"  class="url2" id="url2" value="" name ="productUrl" required/>
+             
+             <input type="submit" id="insert-btn" value="view image" />
+             <br><br>
+             <img src="{{imageUrl}}" alt="pro"/>
+             <div id="myList"></div>
+           </div>
+
+           <div class="second-input">
+             <h3>Desired Price</h3>
+             <img src="{{ url_for('static', filename='tag.jpg') }}" alt="url1" class="url1"/>
+             <input type="number"  class="price" id="price" name="desired_price" required/>
+           </div>
+
+          <div class="add">
+          <button type="submit" name="addUrl" value="add">ADD</button>
+          </form>
+          </div>
+          </div>          
+         </div>
+       </div>              
+     </div>
+   </div>
+
+    <!-- <div>
+    <input type="button" value="Added Product" id="mybtn">
+    
+    <div class="sub-main">
+             
+            <div id="mydiv" > 
+            <p style="font-size: 20px;font-weight: bold;">Title:</p><p id="13" style="font-size: 25px;"></p>
+            <p style="font-size: 20px;font-weight: bold;">Product URL:</p><p id="11" style="font-size: 25px;"></p>
+            <p style="font-size: 20px;font-weight: bold;">Desired Price:</p><p id="12" style="font-size: 25px;"></p>
+          
+          </div>
+
+    </div>
+    </div> -->
+    
+          
+    <script type="text/javascript">
+      document.getElementById('mybtn').addEventListener("click",function() {
+        var mybox=document.getElementById("mydiv");
+        if (mybox.style.display=="block") {
+          mybox.style.display="none";
+        } 
+        else {
+          mybox.style.display="block";
+        }
+      })
+
+      document.getElementById('insert-btn').onclick = function () {
+  const val = document.getElementById('url2').value;
+  const src =  val ;
+  let imgTag = document.createElement('img');
+  imgTag.src = src;
+    
+    document.getElementById("myList").appendChild(imgTag);
+
+}
+    </script>
+</body>
+</html>

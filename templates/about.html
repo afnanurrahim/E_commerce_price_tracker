@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>about</title>
+	<link rel="icon" href="{{ url_for('static', filename='a.png') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='about.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+  <script src="ip.js"></script>
+</head>
+<body>
+	<div>
+		<div class="l1">
+	<img src="{{ url_for('static', filename='logo.png') }}" alt="logo" class="logo">
+	
+  
+	</div>
+	</div>
+
+		<div class="main">
+			<p>Price Tracker keeps track of product want to purchase at a particular price, whenprice to a specified price<br> it notifies the user via registered email.<br>It helps users to save time as they don't need to manually open the app <br>in and check drop in price every day,they just need to copy <br>the URL of product and add to tracker, <br>as soon as price drops user gets notified and can buy product <br>before everyone else does and before product gets out of stock, <br>user can add unlimited products from amazon or flipkart for which he/she wants to track the price. </p>
+			
+		</div>
+		<div class="div2">
+			<img src="{{ url_for('static', filename='1.png') }}" class="image">
+			<p>Signup/Login</p>
+			<img src="{{ url_for('static', filename='2.png') }}" class="image">
+			<p>Enter the URL of desired product(Only once)</p>
+			<img src="{{ url_for('static', filename='3.png') }}" class="image">
+			<p>Get Notified</p>
+			
+		</div>
+	</div>
+
+</body>
+</html>
